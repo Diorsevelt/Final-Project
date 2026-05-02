@@ -1,0 +1,343 @@
+PROJECT PROPOSAL/PSEUDOCODE
+MBTIMATTER
+
+PROBLEM STAMENT
+
+Letting the students know their personality lets them identify their behavior, learning style, and habits. Yet, many students are oblivious when it comes to their personality. This leads to students doing incompatible study methods, having indecisive decision making, and inefficient role placement in groups. 
+
+Most mbti tests require payment after the questionnaires are finished, some have a tiring amount of questions. Students need a quick but reliable personality assessor to quickly identify their most optimal roles in the community.
+
+Objective 
+
+Help students identify their personality type using the MBTI framework
+Improve self-awareness and decision-making in academics
+Encourage better teamwork by aligning roles with personality types
+Provide instant, clear, and understandable results
+
+Features 
+Y/N type questions
+Hasty Identification 
+
+Inputs/output 
+Input
+Student decides to stay anonymous or not(skips 2)
+Type name 
+Answers Y/N questions
+output
+Students name(if not skipped)
+Personality type
+Short Description
+Suggests study methods
+Suggests role
+
+Flowchart
+
+DISPLAY “ MBTIMATTER cares for your personality, Find out now.”
+
+DISPLAY “Do you want to enter your name?: Y/N”
+
+INPUT CHOICE
+
+IF choice == Y THEN 
+DISPLAY “PLEASE GIVE YOUR FULL NAME:”
+INPUT NAME
+
+IF ELSE choice == N THEM 
+LET NAME = User
+
+ELSE 
+DISPLAY “INVALID INPUT AUTOMATICALLY INPUTTING N”
+LET NAME = User
+
+END IF
+
+DISPLAY “Hello, ” + NAME
+
+DISPLAY “ ANSWER EACH QUESTIONS WITH A OR B”
+
+LET I = 0
+LET E = 0
+
+LET S = 0
+LET N = 0
+
+LET F = 0 
+LET T = 0
+
+LET J = 0
+LET P = 0
+
+#I VS E
+FOR i = 1 - 5 
+
+
+IF i == 1 THEN 
+DISPLAY “QUESTION 1: What do you prefer?:”
+Display “A.) Spending time alone”
+Display “B.) Spending time with friends”
+
+ELSE IF question == 2 THEN 
+DISPLAY "QUESTION 2: After a long day, you recharge by:"
+ DISPLAY "A. Quiet time"
+ DISPLAY "B. Socializing" 
+
+ELSE IF question == 3 THEN
+DISPLAY "QUESTION 3: In class, you:" 
+DISPLAY "A. Think before speaking" DISPLAY "B. Speak freely"
+
+ELSE IF question == 4 THEN 
+DISPLAY "QUESTION 4: You enjoy:"
+ DISPLAY "A. Small groups" 
+DISPLAY "B. Large gatherings"
+
+ ELSE IF question == 5 THEN 
+DISPLAY "QUESTION 5: You are more:" 
+DISPLAY "A. Reserved" 
+DISPLAY "B. Outgoing" 
+
+END IF 
+INPUT answer 
+
+IF answer == "A" THEN 
+I = I + 1 
+ELSE IF answer == "B" THEN 
+E = E + 1 
+ELSE 
+DISPLAY "Invalid input. Try again." REPEAT question 
+END IF 
+END FOR
+
+#S vs N
+FOR question = 1 to 5
+IF question == 1 THEN
+DISPLAY "6. You focus more on:"
+DISPLAY "A. Facts"
+DISPLAY "B. Ideas"
+
+ELSE IF question == 2 THEN
+DISPLAY "7. You prefer:"
+DISPLAY "A. Practical tasks"
+DISPLAY "B. Imaginative tasks"
+
+ELSE IF question == 3 THEN
+DISPLAY "8. You trust:"
+DISPLAY "A. Experience"
+DISPLAY "B. Intuition"
+
+ELSE IF question == 4 THEN
+DISPLAY "9. You notice:"
+DISPLAY "A. Details"
+DISPLAY "B. Patterns"
+
+ELSE IF question == 5 THEN
+DISPLAY "10. You prefer instructions that are:"
+DISPLAY "A. Clear and step-by-step"
+DISPLAY "B. Flexible and open"
+
+END IF
+INPUT answer
+IF answer == "A" THEN
+S = S + 1
+ELSE IF answer == "B" THEN
+N = N + 1
+ELSE
+DISPLAY "Invalid input. Try again."
+REPEAT question
+END IF
+END FOR
+
+#T vs F
+FOR question = 1 to 5
+IF question == 1 THEN
+DISPLAY "11. You decide based on:"
+DISPLAY "A. Logic"
+DISPLAY "B. Feelings"
+ELSE IF question == 2 THEN
+DISPLAY "12. You value more:"
+DISPLAY "A. Fairness"
+DISPLAY "B. Harmony"
+ELSE IF question == 3 THEN
+DISPLAY "13. When giving feedback:"
+DISPLAY "A. Honest"
+DISPLAY "B. Gentle"
+ELSE IF question == 4 THEN
+DISPLAY "14. You are more:"
+DISPLAY "A. Objective"
+DISPLAY "B. Compassionate"
+ELSE IF question == 5 THEN
+DISPLAY "15. You prefer:"
+DISPLAY "A. Rules"
+DISPLAY "B. People"
+END IF
+INPUT answer
+IF answer == "A" THEN
+T = T + 1
+ELSE IF answer == "B" THEN
+F = F + 1
+ELSE
+DISPLAY "Invalid input. Try again."
+REPEAT question
+END IF
+END FOR
+
+FOR question = 1 to 5
+IF question == 1 THEN
+DISPLAY "16. You prefer:"
+DISPLAY "A. Planning"
+DISPLAY "B. Going with the flow"
+ELSE IF question == 2 THEN
+DISPLAY "17. Your work style:"
+DISPLAY "A. Organized"
+DISPLAY "B. Flexible"
+ELSE IF question == 3 THEN
+DISPLAY "18. Deadlines:"
+DISPLAY "A. Finish early"
+DISPLAY "B. Last-minute"
+ELSE IF question == 4 THEN
+DISPLAY "19. You like:"
+DISPLAY "A. Structure"
+DISPLAY "B. Freedom"
+ELSE IF question == 5 THEN
+DISPLAY "20. You are:"
+DISPLAY "A. Decisive"
+DISPLAY "B. Adaptable"
+END IF
+INPUT answer
+IF answer == "A" THEN
+J = J + 1
+ELSE IF answer == "B" THEN
+P = P + 1
+ELSE
+DISPLAY "Invalid input. Try again."
+REPEAT question
+END IF
+END FOR
+
+IF I > E THEN
+ letter1 = "I"
+ELSE 
+letter1 = "E"
+IF S > N THEN 
+letter2 = "S"
+ELSE 
+letter2 = "N"
+IF T > F THEN 
+letter3 = "T" 
+ELSE letter3 = "F"
+IF J > P THEN 
+letter4 = "J" 
+ELSE letter4 = "P"
+
+SET personality = letter1 + letter2 + letter3 + letter4
+
+DISPLAY "—————————————"
+DISPLAY "RESULTS FOR: " + NAME
+DISPLAY "Your MBTI Type is: " + personality
+
+IF personality == "INTJ" THEN
+    DISPLAY "Type: INTJ (The Strategist)"
+    DISPLAY "Future Jobs: Engineer, Scientist, Architect"
+    DISPLAY "Group Role: Planner / Leader"
+    DISPLAY "Study Method: Independent study, deep focus"
+
+ELSE IF personality == "INTP" THEN
+DISPLAY "Type: INTP (The Thinker)"
+DISPLAY "Future Jobs: Programmer, Researcher, Analyst"
+DISPLAY "Group Role: Idea/Adviser"
+DISPLAY "Study Method: Concept-based learning, self-paced"
+
+ELSE IF personality == "ENTJ" THEN
+DISPLAY "Type: ENTJ (The Commander)"
+DISPLAY "Future Jobs: Manager, CEO, Lawyer"
+DISPLAY "Group Role: Leader / Organizer"
+DISPLAY "Study Method: Goal-oriented, structured plans"
+
+ELSE IF personality == "ENTP" THEN
+DISPLAY "Type: ENTP (The Debater)"
+DISPLAY "Future Jobs: Entrepreneur, Marketer, Inventor"
+DISPLAY "Group Role: Innovator"
+DISPLAY "Study Method: Discussion-based, active learning"
+
+ELSE IF personality == "INFJ" THEN
+DISPLAY "Type: INFJ (The Advocate)"
+DISPLAY "Future Jobs: Counselor, Psychologist, Writer"
+DISPLAY "Group Role: Advisor"
+DISPLAY "Study Method: Quiet environment, reflection"
+
+ELSE IF personality == "INFP" THEN
+DISPLAY "Type: INFP (The Mediator)"
+DISPLAY "Future Jobs: Artist, Writer, Designer"
+DISPLAY "Group Role: Supporter"
+    DISPLAY "Study Method: Personal meaning, creative approach"
+
+ELSE IF personality == "ENFJ" THEN
+DISPLAY "Type: ENFJ (The Protagonist)"
+DISPLAY "Future Jobs: Teacher, Coach, Leader"
+DISPLAY "Group Role: Motivator"
+ DISPLAY "Study Method: Group study, teaching others"
+
+ELSE IF personality == "ENFP" THEN
+DISPLAY "Type: ENFP (The Campaigner)"
+DISPLAY "Future Jobs: Journalist, Actor, Entrepreneur"
+DISPLAY "Group Role: Energizer"
+DISPLAY "Study Method: Interactive, flexible learning"
+
+ELSE IF personality == "ISTJ" THEN
+ DISPLAY "Type: ISTJ (The Inspector)"
+ DISPLAY "Future Jobs: Accountant, Auditor, Engineer"
+ DISPLAY "Group Role: Organizer"
+ DISPLAY "Study Method: Routine, repetition"
+
+ELSE IF personality == "ISFJ" THEN
+ DISPLAY "Type: ISFJ (The Protector)"
+ DISPLAY "Future Jobs: Nurse, Teacher, Caregiver"
+DISPLAY "Group Role: Contributer"
+DISPLAY "Study Method: Step-by-step, consistent review"
+
+ELSE IF personality == "ESTJ" THEN
+DISPLAY "Type: ESTJ (The Executive)"
+DISPLAY "Future Jobs: Manager, Administrator, Officer"
+DISPLAY "Group Role: Director"
+DISPLAY "Study Method: Structured schedules"
+
+ELSE IF personality == "ESFJ" THEN
+DISPLAY "Type: ESFJ (The Consul)"
+DISPLAY "Future Jobs: HR, Teacher, Social Worker"
+DISPLAY "Group Role: Coordinator"
+DISPLAY "Study Method: Group discussions"
+
+ELSE IF personality == "ISTP" THEN
+DISPLAY "Type: ISTP (The Virtuoso)"
+DISPLAY "Future Jobs: Mechanic, Engineer, Technician"
+DISPLAY "Group Role: Problem Solver"
+DISPLAY "Study Method: Hands-on learning"
+
+ELSE IF personality == "ISFP" THEN
+DISPLAY "Type: ISFP (The Adventurer)"
+DISPLAY "Future Jobs: Artist, Musician, Designer"
+DISPLAY "Group Role: Creative Contributor"
+DISPLAY "Study Method: Visual and practical learning"
+
+ELSE IF personality == "ESTP" THEN
+DISPLAY "Type: ESTP (The Entrepreneur)"
+DISPLAY "Future Jobs: Sales, Business, Athlete"
+DISPLAY "Group Role: Action Taker"
+DISPLAY "Study Method: Active,
+real-world practice"
+
+ELSE IF personality == "ESFP" THEN
+ DISPLAY "Type: ESFP (The Entertainer)"
+DISPLAY "Future Jobs: Performer, Host, Influencer"
+DISPLAY "Group Role: Morale booster"
+DISPLAY "Study Method: Interactive, fun learning"
+
+END IF
+
+END
+
+Group members:
+Ecal, Yuan Ezekiel R.
+Bonaobra, Julian Xander
+Arjona, Nikolai Kirk B.
+Cordero, Ervin Neonel C.
+Mores, Eldior Kieve R.
